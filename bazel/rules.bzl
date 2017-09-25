@@ -690,7 +690,7 @@ def lisp_binary(name,
           # build for libsbcl.a, but that'd be basically a lie since
           # most of the code would still be mapped at a fixed
           # address.)
-          # "-Wl,-no-pie",
+        "-Wl,-no-pie",
           # Ensure that symbols needed by lisp code (which grabs them
           # via dlsym at runtime) are exported in the dynamic symbol
           # table.

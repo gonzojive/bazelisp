@@ -93,6 +93,8 @@ def lisp_repositories (base_dir, sbcl_binary_distribution):
 
   native.new_git_repository(
       name = "lisp__sbcl",
+      #commit = "547421704a95e57b70b8f91a8b74a9ce897a3327", #sbcl-1.3.20
+      #commit = "eb4431cfc9db1ca5fe2f653a3ebb50853651a980", #sbcl-1.3.21 (2017-08-31)
       commit = "00b6786847b4407214a0dc8d55d12ed8b61bf074", # sbcl-1.3.15
       remote = "git://git.code.sourceforge.net/p/sbcl/sbcl",
       build_file = base_dir + "/build_defs/lisp__sbcl.BUILD"
@@ -104,7 +106,7 @@ def lisp_repositories (base_dir, sbcl_binary_distribution):
   native.new_git_repository(
       name = "lisp__alexandria",
       commit = "85f82ed88d5fa6e63026038dbb1dad0d6cd5dafe",
-      remote = "https://gitlab.common-lisp.net/alexandria/alexandria.git",
+      remote = "https://github.com/keithj/alexandria.git",
       build_file = base_dir + "/build_defs/lisp__alexandria.BUILD"
   )
 
